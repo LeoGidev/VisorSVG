@@ -92,4 +92,17 @@ while ($fila = mysqli_fetch_array($datos)){
     
         
     }
+    echo "' style='fill:none;stroke:green;stroke-width:2' />";
+
+
+
+
+    echo "<text font-family='Verdana'
+            font-size='13' x='".$puntox;
+    echo "' y='".$puntoyf;
+    echo "' fill='green'>".$uptimefinal;
+    echo "</text>";
+    
+    
+    //////////////grafica temperatura externa/////////////////////////////////////////////////////
         
