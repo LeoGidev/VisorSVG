@@ -13,3 +13,4 @@ if (!$conn) {
 }
 $datos = mysqli_query($conn,"SELECT*FROM Temperatura ");
 /////////////////obtener el valor de la tabla, debemos nombrarla como Temperatura en la base de datos
+$coef=12;
