@@ -11,3 +11,5 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); //envía datos de lo
 if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
 }
+$datos = mysqli_query($conn,"SELECT*FROM Temperatura ");
+/////////////////obtener el valor de la tabla, debemos nombrarla como Temperatura en la base de datos
