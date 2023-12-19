@@ -104,5 +104,29 @@ while ($fila = mysqli_fetch_array($datos)){
     echo "</text>";
     
     
-    //////////////grafica temperatura externa/////////////////////////////////////////////////////
-        
+    //////////////maneja eventos del mouse/////////////////////////////////////////////////////
+
+    echo"</svg>";
+    echo "</br><span id='salida'></br> Hora: 0 </br>Temperatura: 0</span></p>";
+    
+    echo "<script type='text/javascript'>
+    function oMousePosSVG(evento) {
+      var p = svg.createSVGPoint();
+      p.x = evento.clientX;
+      p.y = evento.clientY;
+      var ctm = svg.getScreenCTM().inverse();
+    
+      return p.matrixTransform(ctm);
+    }
+    
+    svg.addEventListener('mousemove', function(evento) {
+      var m = oMousePosSVG(evento);
+      var xx = -50+ parseInt(m.x);
+      var xx2 = Math.round(xx /20);
+      var temp = 300 - parseInt(m.y);
+    
+      var temp2 =  Math.round(temp/".$coef/2;
+      echo ");
+      salida.innerHTML = '</br>Horas: '+ xx2 + 'hs' + '</br>' + 'Temperatura: ' + temp2 + '°C'
+    });
+    </script>";
