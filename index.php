@@ -62,3 +62,34 @@ for($yn=1,$valor=10;$yn<12;$yn++,$valor--){
 	echo "' fill='blue'>".round($valor2);
 	echo "</text>";
 }
+// se obtiene el valor de y dividiendo la cantidad del punto en dos y restando eso a 300
+/// puntos de eje x1
+echo "<text font-family='Verdana' font-size='13' x='550' y='318' fill='blue'> horas </text>";
+echo "<text font-family='Verdana' font-size='13' x='20' y='15' fill='blue'> Temperatura </text>";
+
+echo "<polyline points='";
+$puntox=0;
+$puntoy=0;
+$uptimefinal=0;
+$nodocaid=0;
+$puntcomp=300;
+
+$x=1;
+// 3) Ir Imprimiendo las filas resultantes 
+while ($fila = mysqli_fetch_array($datos)){
+	
+
+    $b=0;	
+    
+    
+        echo $x * 10 +50;
+        echo ",";
+        echo 300 - ($coef*round($fila['tempIN'])/2);
+        echo" ";
+        $x++;
+    
+    
+    
+        
+    }
+        
