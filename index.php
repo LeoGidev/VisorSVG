@@ -35,3 +35,10 @@ for($y1h=1;$y1h<12;$y1h++){
 	echo "' x2='800' y2='".$y;
 	echo "' style='stroke:black;stroke-width:0.2' />";
 }
+///lineas verticales
+for($x1h=0;$x1h<25;$x1h++){
+	$x =50 + $x1h *20 ;
+	echo"<line x1='".$x;
+	echo "' y1='40' x2='".$x;
+	echo "' y2='300' style='stroke:black;stroke-width:0.2' />";
+}
