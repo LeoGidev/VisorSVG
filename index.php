@@ -42,3 +42,23 @@ for($x1h=0;$x1h<25;$x1h++){
 	echo "' y1='40' x2='".$x;
 	echo "' y2='300' style='stroke:black;stroke-width:0.2' />";
 }
+//numeros x
+///verticales
+for($x1h=0;$x1h<25;$x1h++){
+	$x =50 + $x1h *20 ;
+	
+	echo"<text font-family='Verdana'
+        font-size='10' x='".$x;
+	echo "' y='318' fill='blue'>".$x1h;
+	echo "</text>";
+}
+
+///numeros de eje y
+for($yn=1,$valor=10;$yn<12;$yn++,$valor--){
+	$num = 25 + $yn *25;
+	$valor2 = $valor *50/$coef;
+	echo"<text font-family='Verdana'
+        font-size='10' x='20' y='".$num;
+	echo "' fill='blue'>".round($valor2);
+	echo "</text>";
+}
