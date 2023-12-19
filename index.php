@@ -130,3 +130,17 @@ while ($fila = mysqli_fetch_array($datos)){
       salida.innerHTML = '</br>Horas: '+ xx2 + 'hs' + '</br>' + 'Temperatura: ' + temp2 + '°C'
     });
     </script>";
+    // Consulta SQL para obtener el valor máximo de una columna
+$consulta = "SELECT MAX(tempIN) as maximo_valor FROM Temperatura";
+$resultado = $conn->query($consulta);
+ // Obtener el resultado como un array asociativo
+ $filaX = $resultado->fetch_assoc();
+
+ // Obtener el valor máximo
+ $maximo_valor = $filaX['maximo_valor'];
+echo "Pico maximo de temperatura externa en el dia: ".$maximo_valor."°C</br>";
+
+
+echo"</div>";
+
+?>
