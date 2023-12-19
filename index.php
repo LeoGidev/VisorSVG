@@ -17,3 +17,21 @@ $coef=12;
 $y1h=0; //variable y para  lineas horizontales
 $x1h=0;//variable x para  lineas horizontales
 $yn=0;//variable y para numeros de eje uptime(y)
+echo"
+<div class='row'>
+        <div class='col-md-6'>";
+
+
+echo "<svg  id='svg' width='600' height='340' viewBox='0,0,600,340' style='border:2px solid black; '>"; 
+//ejes x e y
+echo "<line x1='50' y1='300' x2='600' y2='300' style='stroke:black;stroke-width:2' />";
+echo "<line x1='50' y1='20' x2='50' y2='300' style='stroke:black;stroke-width:2' />";
+
+//cuadrilla
+///lineas horizontales
+for($y1h=1;$y1h<12;$y1h++){
+	$y = $y1h *25 ;
+	echo"<line x1='50' y1='".$y;
+	echo "' x2='800' y2='".$y;
+	echo "' style='stroke:black;stroke-width:0.2' />";
+}
